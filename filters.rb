@@ -12,6 +12,14 @@ def find(id)
   def enough_github_points?(candidate)
     candidate[:github_points] >= 100
   end
+
+  def knows_ruby_or_python?(candidate)
+    candidate[:languages].include?("Ruby") || candidate[:languages].include?("Python")
+  end
+
+  def recent_applicant?(candidate)
+    candidate[:date_applied] >= Date.today - 15
+  end
   
   def qualified_candidates(candidates)
     candidates.select do |candidate|
