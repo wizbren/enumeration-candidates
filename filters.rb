@@ -25,9 +25,4 @@ def find(id)
     candidate[:age] >= 18
   end
   
-  def qualified_candidates(candidates)
-    candidates.select do |candidate|
-      experienced?
-  end
-  
   # More methods will go below
