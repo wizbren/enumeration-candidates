@@ -24,5 +24,15 @@ def find(id)
   def old_enough?(candidate)
     candidate[:age] >= 18
   end
+
+  def qualified_candidates(candidates)
+    candidates.select do |candidate|
+      experienced?(candidate) &&
+      enough_github_points?(candidate) &&
+      knows_ruby_or_python?(candidate) &&
+      recent_applicant?(candidate) &&
+      old_enough?(candidate)
+    end
+  end
   
   # More methods will go below
