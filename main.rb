@@ -19,3 +19,9 @@ puts sample_find1
 
 sample_find2 = find(9)
 puts sample_find2
+
+sample_gitpoints1 = { github_points: 99 }
+puts enough_github_points?(sample_gitpoints1)
+
+sample_gitpoints2 = { github_points: 101 }
+puts enough_github_points?(sample_gitpoints2)
