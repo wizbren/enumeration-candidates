@@ -20,6 +20,10 @@ def find(id)
   def recent_applicant?(candidate)
     candidate[:date_applied] >= Date.today - 15
   end
+
+  def old_enough?(candidate)
+    candidate[:age] >= 18
+  end
   
   def qualified_candidates(candidates)
     candidates.select do |candidate|
